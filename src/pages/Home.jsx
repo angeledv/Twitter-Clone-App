@@ -1,47 +1,15 @@
-import { useState, useEffect } from "react";
-
-import TweetList from "../components/TweetList";
-
 import TweetForm from "../components/TweetForm";
+import TweetList from "../components/TweetList";
+import NavBar from "../components/NavBar";
 
-const Home = () => {
-  const [tweets, setTweets] = useState([]);
-
-  useEffect(() => {
-    const storedTweets = JSON.parse(localStorage.getItem("tweets")) || [];
-
-    setTweets(storedTweets);
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("tweets", JSON.stringify(tweets));
-  }, [tweets]);
-
-  const addTweet = (text) => {
-    const newTweet = {
-      id: Date.now(),
-
-      text,
-
-      likes: 0,
-    };
-
-    setTweets([newTweet, ...tweets]);
-  };
-
-  const likeTweet = (id) => {
-    setTweets(
-      tweets.map((tweet) =>
-        tweet.id === id ? { ...tweet, likes: tweet.likes + 1 } : tweet
-      )
-    );
-  };
-
+const Home = ({ user, tweets, addTweet, likeTweet, setUser }) => {
   return (
-    <div>
-      <TweetForm onAddTweet={addTweet} />
-
-      <TweetList tweets={tweets} onLike={likeTweet} />
+    <div className="home-content">
+      <NavBar user={user} setUser={setUser} />
+      <div className="">
+        <TweetForm onAddTweet={addTweet} />
+        <TweetList tweets={tweets} onLike={likeTweet} />
+      </div>
     </div>
   );
 };

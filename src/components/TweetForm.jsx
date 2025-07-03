@@ -5,11 +5,8 @@ const TweetForm = ({ onAddTweet }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!text.trim()) return;
-
     onAddTweet(text);
-
     setText("");
   };
 
@@ -21,7 +18,6 @@ const TweetForm = ({ onAddTweet }) => {
         onChange={(e) => setText(e.target.value)}
         placeholder="¿Qué estás pensando?"
       />
-
       <button type="submit">Tweet</button>
     </form>
   );
