@@ -20,7 +20,7 @@ const Login = ({ setUser }) => {
     <div className="content">
       <div className="login-container">
         <form onSubmit={handleSubmit}>
-          <img src="/public/images/Twitter.png" alt="Twitter Logo" />
+          <img src="/Twitter-Clone-App/images/Twitter.png" alt="Twitter Logo" />
           <h2>Iniciar Sesión a Twitter</h2>
           <input
             type="text"
