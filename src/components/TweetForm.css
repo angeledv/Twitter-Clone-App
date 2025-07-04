@@ -1,0 +1,25 @@
+.form-container {
+    display: grid;
+    place-items: center;
+}
+
+form {
+    width: 450px;
+    border-radius: 8px;
+    padding: 1.2rem 1.8rem;
+    border: 1px solid #242020;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input {
+    width: 100%;
+    margin: 0;
+}
+
+form button {
+    background-color: #249EED;
+    color: #fff;
+}

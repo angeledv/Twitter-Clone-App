@@ -1,0 +1,9 @@
+.page-content {
+    width: 100vw;
+    height: 100vh;
+}
+
+.home-content, .profile-content {
+    display: grid;
+    grid-template-rows: 1rf 10fr;
+}

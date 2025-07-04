@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import "./NavBar.css";
 
 const NavBar = ({ user, setUser }) => {
   const navigate = useNavigate();
@@ -10,11 +11,13 @@ const NavBar = ({ user, setUser }) => {
   };
 
   return (
-    <nav style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
+    <nav>
       <span>Hola, @{user.username}</span>
-      <button onClick={() => navigate("/")}>Inicio</button>
-      <button onClick={() => navigate("/profile")}>Mi Perfil</button>
-      <button onClick={handleLogout}>Cerrar sesión</button>
+      <div className="btn-container">
+        <button onClick={() => navigate("/")}>Inicio</button>
+        <button onClick={() => navigate("/profile")}>Mi Perfil</button>
+        <button onClick={handleLogout}>Cerrar sesión</button>
+      </div>
     </nav>
   );
 };

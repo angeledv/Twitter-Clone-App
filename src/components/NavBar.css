@@ -1,0 +1,27 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 1px 10px #fff2;
+    margin-block-end: 3rem;
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.btn-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.btn-container button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+}

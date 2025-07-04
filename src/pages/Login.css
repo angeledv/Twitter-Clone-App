@@ -11,7 +11,7 @@ body {
 
 .login-container {
     background-color: #000000;
-    border: 1px solid #8d7a7a;
+    /* border: 1px solid #8d7a7a; */
     padding: 3rem;
     border-radius: 6px;
 }
@@ -48,4 +48,9 @@ button {
     color: #000;
     border-radius: 100px;
     margin-block-start: 2rem;
+}
+
+form {
+    width: 300px;
+    padding: 3rem;
 }
